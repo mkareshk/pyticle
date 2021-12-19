@@ -10,8 +10,8 @@ class Particle:
         :param var_size: the problem's dimension
         """
         self.position = np.random.uniform(low=low_bound, high=high_bound, size=var_size)
-        self.particle_best_position = self.position
-        self.particle_best_fitness = np.inf
+        self.best_position = self.position
+        self.best_fitness = np.inf
         range_bound = high_bound - low_bound
         self.velocity = np.random.uniform(
             low=-range_bound, high=range_bound, size=var_size
