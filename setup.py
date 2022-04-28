@@ -19,10 +19,10 @@ setuptools.setup(
     ],
     install_requires=[
         "tabulate>=0.8.9",
-        "imageio>=2.16.0",
+        "imageio>=2.18.0",
         "matplotlib>=3.5.1",
         "joblib>=1.1.0",
-        "pandas>1.4.1",
+        "pandas>1.4.2",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.10",
 )
