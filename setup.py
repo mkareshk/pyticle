@@ -18,11 +18,12 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "tabulate>=0.8.9",
-        "imageio>=2.18.0",
-        "matplotlib>=3.5.1",
+        "tabulate>=0.8.10",
+        "imageio>=2.21.0",
+        "matplotlib>=3.5.2",
         "joblib>=1.1.0",
         "pandas>1.4.2",
     ],
     python_requires=">=3.10",
+    py_modules=["pyticle"],
 )
