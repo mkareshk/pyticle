@@ -45,9 +45,9 @@ def demo_run():
             benchmark_name=cost_functions[i].__name__,
         )
         demo_visualizer.store_statistics(
-            optimizer.fitness_min_hist,
-            optimizer.fitness_mean_hist,
-            optimizer.fitness_max_hist,
+            optimizer.cost_min_hist,
+            optimizer.cost_mean_hist,
+            optimizer.cost_max_hist,
         )
         demo_visualizer.store_figs()
         demo_visualizer.generate_gif()

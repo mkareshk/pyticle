@@ -9,15 +9,15 @@ import numpy as np
 
 class DemoVisualizer:
     def __init__(
-            self,
-            cost_func: object,
-            particle_positions_hist: list,
-            global_best_position_hist: list,
-            low: float,
-            high: float,
-            n_jobs: int,
-            last_only: bool,
-            benchmark_name: str,
+        self,
+        cost_func: object,
+        particle_positions_hist: list,
+        global_best_position_hist: list,
+        low: float,
+        high: float,
+        n_jobs: int,
+        last_only: bool,
+        benchmark_name: str,
     ):
         """
         implements the demo visualizer class
@@ -48,19 +48,19 @@ class DemoVisualizer:
         Path(self.benchmark_name).mkdir(parents=True, exist_ok=True)
 
     def store_statistics(
-            self, fitness_min_hist: list, fitness_mean_hist: list, fitness_max_hist: list
+        self, cost_min_hist: list, cost_mean_hist: list, cost_max_hist: list
     ):
         """
         plots the history of changes in the cost function over time
-        :param fitness_min_hist: the history of the min values of cost function
-        :param fitness_mean_hist: the history of the mean values of cost function
-        :param fitness_max_hist: the history of the max values of cost function
+        :param cost_min_hist: the history of the min values of cost function
+        :param cost_mean_hist: the history of the mean values of cost function
+        :param cost_max_hist: the history of the max values of cost function
         """
 
-        plt.plot(fitness_min_hist)
-        plt.plot(fitness_mean_hist)
-        plt.plot(fitness_max_hist)
-        plt.title("The changes of Fitness Function Over Time")
+        plt.plot(cost_min_hist)
+        plt.plot(cost_mean_hist)
+        plt.plot(cost_max_hist)
+        plt.title("The changes of Cost Function Over Time")
         plt.xlabel("# Iteration")
         plt.ylabel("Cost Function")
         plt.legend(["Min", "Mean", "Max"])
